@@ -1,5 +1,4 @@
 # nodejs-interview-questions
-Here are the interview questions and their answers extracted from the provided video transcript, formatted as requested:
 
 Q1. **What is Node.js?**
 A1. Node.js is **neither a programming language nor a framework**. Instead, it is a **runtime environment for executing JavaScript code on the server side**. A runtime environment executes programs and is responsible for tasks like memory management and converting high-level languages (like JavaScript) to lower-level machine languages. Node.js was created by wrapping the **V8 JavaScript engine** (found in Chrome browsers) to allow JavaScript to run outside the browser, specifically on the server side.
