@@ -1,5 +1,161 @@
 # nodejs-interview-questions
 
+### Summary Table of All Questions
+
+| Q.No. | Question |
+| :---- | :------------------------------------------------------------------------------------------------ |
+| Q1    | What is Node.js?                                                                                  |
+| Q2    | What is the difference between a framework and a runtime environment?                              |
+| Q3    | What is the difference between Node.js and Express.js?                                            |
+| Q4    | What are the differences between client-side and server-side?                                     |
+| Q5    | What are the seven main features of Node?                                                         |
+| Q6    | What is single-threaded programming?                                                              |
+| Q7    | What is synchronous programming?                                                                  |
+| Q8    | What is multi-threaded programming?                                                               |
+| Q9    | What is asynchronous programming?                                                                 |
+| Q10   | What is the difference between synchronous and asynchronous programming?                          |
+| Q11   | What are events, event emitter, event Q, event Loop, and event driven in Node?                    |
+| Q12   | What are the main features and advantages of Node?                                                |
+| Q13   | What are the disadvantages of Node? When to use or when not to use Node?                          |
+| Q14   | How to set up a Node project?                                                                     |
+| Q15   | What is npm? What is the role of Node modules folder in your project?                             |
+| Q16   | What are Node modules?                                                                            |
+| Q17   | What is the role of package.json file in Node?                                                    |
+| Q18   | What are modules in Node? What is the difference between a function and a module?                 |
+| Q19   | How many ways are there to export a module?                                                       |
+| Q20   | What will happen if you do not export the module?                                                 |
+| Q21   | How to import single or multiple functions from a module?                                         |
+| Q22   | What is module wrapper function?                                                                  |
+| Q23   | What are the types of modules in Node?                                                            |
+| Q24   | What are the top five built-in modules commonly used in Node projects?                            |
+| Q25   | Explain the role of the FS module. Name some functions of it.                                     |
+| Q26   | Explain the role of the Path module. Name some functions of it.                                   |
+| Q27   | Explain the role of the OS module. Name some functions of it.                                     |
+| Q28   | Explain the role of Events module. How to handle events in Node?                                  |
+| Q29   | What are event arguments?                                                                         |
+| Q30   | What is the difference between a function and an event?                                           |
+| Q31   | What is the role of HTTP module in Node?                                                          |
+| Q32   | What is the role of `createServer` method of the HTTP module?                                     |
+| Q33   | What are the advantages of using Express with Node?                                               |
+| Q34   | How do you install Express in a Node project?                                                     |
+| Q35   | How to create an HTTP server using Express.js?                                                    |
+| Q36   | How do you create and start the Express application?                                              |
+| Q37   | What is middleware in Express.js and when to use them?                                            |
+| Q38   | How to implement middleware in Express?                                                           |
+| Q39   | What is the purpose of the `app.use` function in Express?                                         |
+| Q40   | What is the purpose of the `next` parameter in Express.js?                                        |
+| Q41   | How to use middleware globally for a specific route?                                              |
+| Q42   | What is the request pipeline in Express?                                                          |
+| Q43   | What are the types of middlewares in Express.js?                                                  |
+| Q44   | What is the difference between Application Level and Router level middleware?                     |
+| Q45   | What is error handling middleware and how to implement it?                                        |
+| Q46   | If you have five middlewares then in which middleware you will do the error handling?             |
+| Q47   | What is built-in middleware? How to serve static files from the Express.js?                       |
+| Q48   | What are third-party middleware? Give some examples.                                              |
+| Q49   | Can you summarise all the types of middlewares?                                                   |
+| Q50   | What are the advantages of using middlewares in Express.js?                                       |
+| Q51   | What is routing in Express?                                                                       |
+| Q52   | What is the difference between middleware and routing in Express?                                 |
+| Q53   | How to implement routing? How do you define routes in Express?                                    |
+| Q54   | How to handle routing in Express real applications?                                               |
+| Q55   | What are route handlers?                                                                          |
+| Q56   | What are route parameters in Express?                                                             |
+| Q57   | What are router object and router methods and how to implement them?                              |
+| Q58   | What are the types of router methods?                                                             |
+| Q59   | What is the difference between `app.get` and `router.get` methods?                                |
+| Q60   | What is `express.Router` in Express.js?                                                           |
+| Q61   | Share a real application use of routing.                                                          |
+| Q62   | What is route chaining in Express?                                                                |
+| Q63   | What is route nesting in Express?                                                                 |
+| Q64   | How to implement route nesting in Express?                                                        |
+| Q65   | What are template engines in Express?                                                             |
+| Q66   | Name some template engine libraries.                                                              |
+| Q67   | How to implement EJS templating engine in Express application?                                    |
+| Q68   | What are REST and RESTful API?                                                                    |
+| Q69   | What are the HTTP request and HTTP response structure in the UI and REST API?                     |
+| Q70   | What are the top five REST guidelines and the advantages of them?                                 |
+| Q71   | What is the difference between REST API and SOAP API?                                             |
+| Q72   | What are HTTP verbs and HTTP methods?                                                             |
+| Q73   | What are the GET, POST, PUT and DELETE HTTP methods?                                              |
+| Q74   | What is the difference between the PUT and the PATCH methods?                                     |
+| Q75   | Explain the concept of Idempotent in RESTful API.                                                 |
+| Q76   | What is the role of Status Codes in RESTful APIs?                                                 |
+| Q77   | What is CORS in RESTful APIs?                                                                     |
+| Q78   | How to remove CORS restriction on RESTful API?                                                    |
+| Q79   | What are Serialization and Deserialization?                                                       |
+| Q80   | What are the types of Serialization?                                                              |
+| Q81   | How to serialize and deserialize in Node.js?                                                      |
+| Q82   | Explain the concept of Versioning in RESTful APIs.                                                |
+| Q83   | What is an API document? What are the popular documentation formats?                               |
+| Q84   | What is the typical structure of a REST API project in Node?                                      |
+| Q85   | What are Authentication and Authorization?                                                        |
+| Q86   | What are the types of authentication in Node?                                                     |
+| Q87   | What is Basic Authentication?                                                                     |
+| Q88   | What are the security risk associated with storing password as plain text in Node.js?             |
+| Q89   | What is the role of Hashing and Salt in securing passwords?                                       |
+| Q90   | How can we create hash passwords in Node.js?                                                      |
+| Q91   | What is API Key Authentication?                                                                   |
+| Q92   | What is Token Based Authentication and JWT Authentication?                                        |
+| Q93   | What are the parts of the JWT token?                                                              |
+| Q94   | Where JWT token resides in the request?                                                           |
+| Q95   | What is error handling? How many ways you can implement error handling in Node applications?      |
+| Q96   | How to handle errors in synchronous operations using try-catch-finally?                           |
+| Q97   | What is Error First Callbacks?                                                                    |
+| Q98   | How to handle errors using Promises?                                                              |
+| Q99   | How to handle errors using async/await?                                                           |
+| Q100  | How can you debug Node.js application?                                                            |
+
+### Top 20 List of “Most Important for Beginners” Questions
+
+These questions cover fundamental concepts and essential practical knowledge for anyone starting with Node.js and Express.js, as highlighted in the source:
+
+1.  **What is Node.js?**
+2.  **What is the difference between a framework and a runtime environment?**
+3.  **What is the difference between Node.js and Express.js?**
+4.  **What are the differences between client-side and server-side?**
+5.  **What are the seven main features of Node?**
+6.  **What is asynchronous programming?**
+7.  **What are events, event emitter, event Q, event Loop, and event driven in Node?**
+8.  **What are the main features and advantages of Node?**
+9.  **What are the disadvantages of Node? When to use or when not to use Node?**
+10. **What is npm? What is the role of Node modules folder in your project?**
+11. **What are modules in Node? What is the difference between a function and a module?**
+12. **What are the types of modules in Node?**
+13. **What are the top five built-in modules commonly used in Node projects?**
+14. **Explain the role of the FS module. Name some functions of it.**
+15. **Explain the role of the HTTP module in Node?**
+16. **What are the advantages of using Express with Node?**
+17. **What is middleware in Express.js and when to use them?**
+18. **What is the purpose of the `next` parameter in Express.js?**
+19. **What are REST and RESTful API?**
+20. **What are Authentication and Authorization?**
+
+### Top 20 List of “Most Common in Real Interviews”
+
+These questions are frequently encountered in Node.js developer interviews, often testing both theoretical understanding and practical application scenarios:
+
+1.  **What is Node.js?**
+2.  **What are the seven main features of Node?**
+3.  **What are the main features and advantages of Node?**
+4.  **What are the disadvantages of Node? When to use or when not to use Node?**
+5.  **What are the top five built-in modules commonly used in Node projects?**
+6.  **What is middleware in Express.js and when to use them?**
+7.  **What is the purpose of the `next` parameter in Express.js?**
+8.  **What is error handling middleware and how to implement it?**
+9.  **If you have five middlewares then in which middleware you will do the error handling?**
+10. **What are third-party middleware? Give some examples.**
+11. **What is routing in Express?**
+12. **What is the difference between middleware and routing in Express?**
+13. **What is the difference between `app.get` and `router.get` methods?**
+14. **What are REST and RESTful API?**
+15. **What are the top five REST guidelines and the advantages of them?**
+16. **What is CORS in RESTful APIs?**
+17. **What are Serialization and Deserialization?**
+18. **What are Authentication and Authorization?**
+19. **What is Token Based Authentication and JWT Authentication?**
+20. **What is error handling? How many ways you can implement error handling in Node applications?**
+
+
 Q1. **What is Node.js?**
 A1. Node.js is **neither a programming language nor a framework**. Instead, it is a **runtime environment for executing JavaScript code on the server side**. A runtime environment executes programs and is responsible for tasks like memory management and converting high-level languages (like JavaScript) to lower-level machine languages. Node.js was created by wrapping the **V8 JavaScript engine** (found in Chrome browsers) to allow JavaScript to run outside the browser, specifically on the server side.
 
@@ -576,158 +732,3 @@ A100. Five techniques to debug Node.js applications are:
 5.  **Chrome Developer Tools**: Using the Chrome browser's developer tools for debugging, as Node.js runs on the V8 engine.
 
 ---
-
-### Summary Table of All Questions
-
-| Q.No. | Question |
-| :---- | :------------------------------------------------------------------------------------------------ |
-| Q1    | What is Node.js?                                                                                  |
-| Q2    | What is the difference between a framework and a runtime environment?                              |
-| Q3    | What is the difference between Node.js and Express.js?                                            |
-| Q4    | What are the differences between client-side and server-side?                                     |
-| Q5    | What are the seven main features of Node?                                                         |
-| Q6    | What is single-threaded programming?                                                              |
-| Q7    | What is synchronous programming?                                                                  |
-| Q8    | What is multi-threaded programming?                                                               |
-| Q9    | What is asynchronous programming?                                                                 |
-| Q10   | What is the difference between synchronous and asynchronous programming?                          |
-| Q11   | What are events, event emitter, event Q, event Loop, and event driven in Node?                    |
-| Q12   | What are the main features and advantages of Node?                                                |
-| Q13   | What are the disadvantages of Node? When to use or when not to use Node?                          |
-| Q14   | How to set up a Node project?                                                                     |
-| Q15   | What is npm? What is the role of Node modules folder in your project?                             |
-| Q16   | What are Node modules?                                                                            |
-| Q17   | What is the role of package.json file in Node?                                                    |
-| Q18   | What are modules in Node? What is the difference between a function and a module?                 |
-| Q19   | How many ways are there to export a module?                                                       |
-| Q20   | What will happen if you do not export the module?                                                 |
-| Q21   | How to import single or multiple functions from a module?                                         |
-| Q22   | What is module wrapper function?                                                                  |
-| Q23   | What are the types of modules in Node?                                                            |
-| Q24   | What are the top five built-in modules commonly used in Node projects?                            |
-| Q25   | Explain the role of the FS module. Name some functions of it.                                     |
-| Q26   | Explain the role of the Path module. Name some functions of it.                                   |
-| Q27   | Explain the role of the OS module. Name some functions of it.                                     |
-| Q28   | Explain the role of Events module. How to handle events in Node?                                  |
-| Q29   | What are event arguments?                                                                         |
-| Q30   | What is the difference between a function and an event?                                           |
-| Q31   | What is the role of HTTP module in Node?                                                          |
-| Q32   | What is the role of `createServer` method of the HTTP module?                                     |
-| Q33   | What are the advantages of using Express with Node?                                               |
-| Q34   | How do you install Express in a Node project?                                                     |
-| Q35   | How to create an HTTP server using Express.js?                                                    |
-| Q36   | How do you create and start the Express application?                                              |
-| Q37   | What is middleware in Express.js and when to use them?                                            |
-| Q38   | How to implement middleware in Express?                                                           |
-| Q39   | What is the purpose of the `app.use` function in Express?                                         |
-| Q40   | What is the purpose of the `next` parameter in Express.js?                                        |
-| Q41   | How to use middleware globally for a specific route?                                              |
-| Q42   | What is the request pipeline in Express?                                                          |
-| Q43   | What are the types of middlewares in Express.js?                                                  |
-| Q44   | What is the difference between Application Level and Router level middleware?                     |
-| Q45   | What is error handling middleware and how to implement it?                                        |
-| Q46   | If you have five middlewares then in which middleware you will do the error handling?             |
-| Q47   | What is built-in middleware? How to serve static files from the Express.js?                       |
-| Q48   | What are third-party middleware? Give some examples.                                              |
-| Q49   | Can you summarise all the types of middlewares?                                                   |
-| Q50   | What are the advantages of using middlewares in Express.js?                                       |
-| Q51   | What is routing in Express?                                                                       |
-| Q52   | What is the difference between middleware and routing in Express?                                 |
-| Q53   | How to implement routing? How do you define routes in Express?                                    |
-| Q54   | How to handle routing in Express real applications?                                               |
-| Q55   | What are route handlers?                                                                          |
-| Q56   | What are route parameters in Express?                                                             |
-| Q57   | What are router object and router methods and how to implement them?                              |
-| Q58   | What are the types of router methods?                                                             |
-| Q59   | What is the difference between `app.get` and `router.get` methods?                                |
-| Q60   | What is `express.Router` in Express.js?                                                           |
-| Q61   | Share a real application use of routing.                                                          |
-| Q62   | What is route chaining in Express?                                                                |
-| Q63   | What is route nesting in Express?                                                                 |
-| Q64   | How to implement route nesting in Express?                                                        |
-| Q65   | What are template engines in Express?                                                             |
-| Q66   | Name some template engine libraries.                                                              |
-| Q67   | How to implement EJS templating engine in Express application?                                    |
-| Q68   | What are REST and RESTful API?                                                                    |
-| Q69   | What are the HTTP request and HTTP response structure in the UI and REST API?                     |
-| Q70   | What are the top five REST guidelines and the advantages of them?                                 |
-| Q71   | What is the difference between REST API and SOAP API?                                             |
-| Q72   | What are HTTP verbs and HTTP methods?                                                             |
-| Q73   | What are the GET, POST, PUT and DELETE HTTP methods?                                              |
-| Q74   | What is the difference between the PUT and the PATCH methods?                                     |
-| Q75   | Explain the concept of Idempotent in RESTful API.                                                 |
-| Q76   | What is the role of Status Codes in RESTful APIs?                                                 |
-| Q77   | What is CORS in RESTful APIs?                                                                     |
-| Q78   | How to remove CORS restriction on RESTful API?                                                    |
-| Q79   | What are Serialization and Deserialization?                                                       |
-| Q80   | What are the types of Serialization?                                                              |
-| Q81   | How to serialize and deserialize in Node.js?                                                      |
-| Q82   | Explain the concept of Versioning in RESTful APIs.                                                |
-| Q83   | What is an API document? What are the popular documentation formats?                               |
-| Q84   | What is the typical structure of a REST API project in Node?                                      |
-| Q85   | What are Authentication and Authorization?                                                        |
-| Q86   | What are the types of authentication in Node?                                                     |
-| Q87   | What is Basic Authentication?                                                                     |
-| Q88   | What are the security risk associated with storing password as plain text in Node.js?             |
-| Q89   | What is the role of Hashing and Salt in securing passwords?                                       |
-| Q90   | How can we create hash passwords in Node.js?                                                      |
-| Q91   | What is API Key Authentication?                                                                   |
-| Q92   | What is Token Based Authentication and JWT Authentication?                                        |
-| Q93   | What are the parts of the JWT token?                                                              |
-| Q94   | Where JWT token resides in the request?                                                           |
-| Q95   | What is error handling? How many ways you can implement error handling in Node applications?      |
-| Q96   | How to handle errors in synchronous operations using try-catch-finally?                           |
-| Q97   | What is Error First Callbacks?                                                                    |
-| Q98   | How to handle errors using Promises?                                                              |
-| Q99   | How to handle errors using async/await?                                                           |
-| Q100  | How can you debug Node.js application?                                                            |
-
-### Top 20 List of “Most Important for Beginners” Questions
-
-These questions cover fundamental concepts and essential practical knowledge for anyone starting with Node.js and Express.js, as highlighted in the source:
-
-1.  **What is Node.js?**
-2.  **What is the difference between a framework and a runtime environment?**
-3.  **What is the difference between Node.js and Express.js?**
-4.  **What are the differences between client-side and server-side?**
-5.  **What are the seven main features of Node?**
-6.  **What is asynchronous programming?**
-7.  **What are events, event emitter, event Q, event Loop, and event driven in Node?**
-8.  **What are the main features and advantages of Node?**
-9.  **What are the disadvantages of Node? When to use or when not to use Node?**
-10. **What is npm? What is the role of Node modules folder in your project?**
-11. **What are modules in Node? What is the difference between a function and a module?**
-12. **What are the types of modules in Node?**
-13. **What are the top five built-in modules commonly used in Node projects?**
-14. **Explain the role of the FS module. Name some functions of it.**
-15. **Explain the role of the HTTP module in Node?**
-16. **What are the advantages of using Express with Node?**
-17. **What is middleware in Express.js and when to use them?**
-18. **What is the purpose of the `next` parameter in Express.js?**
-19. **What are REST and RESTful API?**
-20. **What are Authentication and Authorization?**
-
-### Top 20 List of “Most Common in Real Interviews”
-
-These questions are frequently encountered in Node.js developer interviews, often testing both theoretical understanding and practical application scenarios:
-
-1.  **What is Node.js?**
-2.  **What are the seven main features of Node?**
-3.  **What are the main features and advantages of Node?**
-4.  **What are the disadvantages of Node? When to use or when not to use Node?**
-5.  **What are the top five built-in modules commonly used in Node projects?**
-6.  **What is middleware in Express.js and when to use them?**
-7.  **What is the purpose of the `next` parameter in Express.js?**
-8.  **What is error handling middleware and how to implement it?**
-9.  **If you have five middlewares then in which middleware you will do the error handling?**
-10. **What are third-party middleware? Give some examples.**
-11. **What is routing in Express?**
-12. **What is the difference between middleware and routing in Express?**
-13. **What is the difference between `app.get` and `router.get` methods?**
-14. **What are REST and RESTful API?**
-15. **What are the top five REST guidelines and the advantages of them?**
-16. **What is CORS in RESTful APIs?**
-17. **What are Serialization and Deserialization?**
-18. **What are Authentication and Authorization?**
-19. **What is Token Based Authentication and JWT Authentication?**
-20. **What is error handling? How many ways you can implement error handling in Node applications?**
